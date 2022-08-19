@@ -71,25 +71,25 @@ function showWeather(weatherObj) {
     country = weatherObj.sys.country,
     city = weatherObj.name;
   if (main == 'Thunderstorm') {
-    weatherImg.src = '/icons/storm.svg';
+    weatherImg.src = 'icons/storm.svg';
   } else if (main == 'Drizzle') {
-    weatherImg.src = '/icons/haze.svg';
+    weatherImg.src = 'icons/haze.svg';
   } else if (main == 'Rain') {
-    weatherImg.src = '/icons/rain.svg';
+    weatherImg.src = 'icons/rain.svg';
   } else if (main == 'Snow') {
-    weatherImg.src = '/icons/snow.svg';
+    weatherImg.src = 'icons/snow.svg';
   } else if (main == 'Atmosphere') {
-    weatherImg.src = '/icons/haze.svg';
+    weatherImg.src = 'icons/haze.svg';
   } else if (main == 'Clouds') {
-    weatherImg.src = '/icons/cloud.svg';
+    weatherImg.src = 'icons/cloud.svg';
   } else {
-    weatherImg.src = '/icons/clear.svg';
+    weatherImg.src = 'icons/clear.svg';
   };
   weatherDesc.innerHTML = description;
   temperature.innerHTML = `${temp}°C`;
   locationCity.innerHTML = `<i class="uil uil-location-point"></i> ${city}, ${country}`;
   Humidity.innerHTML = `${humidity}%`;
-  WindSpeed.innerHTML = `${windSpeed} KM/H`;
+  WindSpeed.innerHTML = `${windSpeed} km/h`;
 };
 
 backIcon.addEventListener('click', () => {
