@@ -29,6 +29,7 @@ function fetchAPI(city) {
   infoMsg.innerHTML = 'Pesquisando por <code>' + city + '</code>...';
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=575af8fced42b742db9252da595fe47b`)
     .then(res => res.json()).then(data => {
+      console.log(data)
       if (data.cod != '404') {
         infoMsg.classList.remove('loading', 'error');
         container.classList.add('active');
@@ -53,6 +54,7 @@ getLocationBtn.addEventListener('click', () => {
     let { latitude, longitude } = pos.coords;
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=575af8fced42b742db9252da595fe47b`)
       .then(res => res.json()).then(data => {
+        console.assert(data)
         infoMsg.classList.remove('loading', 'error');
         container.classList.add('active');
         showWeather(data);
